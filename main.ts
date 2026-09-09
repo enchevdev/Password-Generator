@@ -4,9 +4,17 @@ const cijfers: string = "0123456789";
 const specialeTekens: string = "&$*`£/+=-;?@#";
 const lengteWachtwoord: number = 12;
 
-const samenVoegen: string =
+let samenVoegen: string =
   kleinLetters + hoofdLetters + cijfers + specialeTekens;
 
-const willekeurigGetal: number = Math.floor(Math.random() * samenVoegen.length);
+let volledigWachtwoord: string = "";
 
-console.log(samenVoegen[willekeurigGetal]);
+for (let i = 0; i < lengteWachtwoord; i++) {
+  const willekeurigGetal: number = Math.floor(
+    Math.random() * samenVoegen.length,
+  );
+
+  volledigWachtwoord += samenVoegen[willekeurigGetal];
+}
+
+console.log("Generated password:", volledigWachtwoord);
