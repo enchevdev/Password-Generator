@@ -7,4 +7,6 @@ const lengteWachtwoord: number = 12;
 const samenVoegen: string =
   kleinLetters + hoofdLetters + cijfers + specialeTekens;
 
-console.log(samenVoegen);
+const willekeurigGetal: number = Math.floor(Math.random() * samenVoegen.length);
+
+console.log(samenVoegen[willekeurigGetal]);
