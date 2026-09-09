@@ -8,9 +8,7 @@ const cijfers: string = "0123456789";
 const specialeTekens: string = "&$*`£/+=-;?@#";
 
 btn?.addEventListener("click", () => {
-  const lengte: number = Number(
-    (passwordLength as HTMLInputElement).value,
-  );
+  const lengte: number = Number((passwordLength as HTMLInputElement).value);
 
   let samenVoegen: string =
     kleinLetters + hoofdLetters + cijfers + specialeTekens;
